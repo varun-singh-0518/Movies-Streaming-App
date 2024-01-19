@@ -24,7 +24,7 @@ function App() {
           <Route path="/" element={<Netflix />} />
         </Routes>
       </BrowserRouter>
-      <ToastContainer autoClose={700} theme="colored" />
+      <ToastContainer autoClose={2000} theme="colored" />
     </>
   );
 }

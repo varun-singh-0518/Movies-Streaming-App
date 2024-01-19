@@ -1,5 +1,4 @@
 import {configureStore, createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {API_KEY, TMBD_BASE_URL, HOST} from "../utils/constants";
 import axios from "axios";
 
 // Initializes the Redux state with three properties.
@@ -13,7 +12,9 @@ const initialState = {
 export const getGenres = createAsyncThunk("netflix/genres", async () => {
   const {
     data: {genres},
-  } = await axios.get(`${TMBD_BASE_URL}/genre/movie/list?api_key=${API_KEY}`);
+  } = await axios.get(
+    `${process.env.REACT_APP_TMDB_BASE_URL}/genre/movie/list?api_key=${process.env.REACT_APP_API_KEY}`
+  );
   return genres;
 });
 
@@ -24,7 +25,7 @@ export const fetchMovies = createAsyncThunk(
       netflix: {genres},
     } = thunkApi.getState(); // Extracts the genres from the Redux store using thunkApi.getState().
     const movies = await getRawData(
-      `${TMBD_BASE_URL}/trending/${type}/week?api_key=${API_KEY}`,
+      `${process.env.REACT_APP_TMDB_BASE_URL}/trending/${type}/week?api_key=${process.env.REACT_APP_API_KEY}`,
       genres,
       true
     );
@@ -80,7 +81,7 @@ export const fetchDataByGenre = createAsyncThunk(
       netflix: {genres},
     } = thunkApi.getState();
     return getRawData(
-      `${TMBD_BASE_URL}/discover/${type}?api_key=${API_KEY}&with_genres=${genre}`,
+      `${process.env.REACT_APP_TMDB_BASE_URL}/discover/${type}?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${genre}`,
       genres
     );
   }
@@ -89,9 +90,12 @@ export const fetchDataByGenre = createAsyncThunk(
 export const getUserLikedMovies = createAsyncThunk(
   "netflix/getLiked",
   async (email) => {
-    const movie = await axios.post(`${HOST}/api/user/liked`, {
-      email,
-    });
+    const movie = await axios.post(
+      `${process.env.REACT_APP_HOST}/api/user/liked`,
+      {
+        email,
+      }
+    );
     const movies = movie.data;
     return movies;
   }
@@ -100,10 +104,13 @@ export const getUserLikedMovies = createAsyncThunk(
 export const removeFromLikedMovies = createAsyncThunk(
   "netflix/deleteLiked",
   async ({email, movieID}) => {
-    const movie = await axios.put(`${HOST}/api/user/delete`, {
-      email,
-      movieID,
-    });
+    const movie = await axios.put(
+      `${process.env.REACT_APP_HOST}/api/user/delete`,
+      {
+        email,
+        movieID,
+      }
+    );
 
     const movies = movie.data;
     return movies;

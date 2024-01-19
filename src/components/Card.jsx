@@ -11,7 +11,6 @@ import {firebaseAuth} from "../utils/firebase-config";
 import axios from "axios";
 import {removeFromLikedMovies} from "../store/store";
 import {useDispatch} from "react-redux";
-import {HOST} from "../utils/constants";
 import {toast} from "react-toastify";
 
 export default function Card({movieData, isLiked = false}) {
@@ -31,7 +30,7 @@ export default function Card({movieData, isLiked = false}) {
 
   const addToList = async () => {
     try {
-      await axios.post(`${HOST}/api/user/add`, {
+      await axios.post(`${process.env.REACT_APP_HOST}/api/user/add`, {
         email,
         data: movieData,
       });
