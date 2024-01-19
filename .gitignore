@@ -3,9 +3,6 @@
 # dependencies
 /node_modules
 
-# Ignore the utils folder
-/src/utils
-
 /.pnp
 .pnp.js
 
