@@ -70,6 +70,11 @@ Start the server
 ```
 
 
+## Acknowledgements
+
+ - The Netlix API used in this project is inspired by TMDb API.
+- UI design and layout inspiration from Netflix.
+
 # Hi, I'm Varun! 👋
 
 
