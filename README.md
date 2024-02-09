@@ -1,70 +1,78 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Movie Streaming App
 
-## Available Scripts
+This project is a Netflix clone built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It aims to replicate the user interface and functionality of the popular streaming platform Netflix. Users can browse through a catalog of movies and TV shows, view details of each movie card hovering over them.
 
-In the project directory, you can run:
+# Features
 
-### `npm start`
+- User Authentication:- Users can sign up, log in, and log out securely.
+- Browse Catalog:- Users can browse through a collection of movies and TV shows.
+- Separate Pages for Browsing Movies and TV Shows:- Users can navigate between distinct pages for browsing movies and TV shows, providing a more organized and intuitive user experience.
+- Filter Titles by Genres:- Users have the option to filter movies and TV shows by genres, allowing them to discover content based on their preferences.
+- Add Movies to "My List":- Users can add movies and TV shows to their personal "My List" for easy access and bookmarking of their favorite content.
+- Remove Movies from "My List":- Users have the ability to remove movies or TV shows from their "My List" if they no longer wish to keep them saved for future viewing.
+- Responsive Design:- The application is designed to be responsive and accessible across various devices and screen sizes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
 
-### `npm test`
+![App Screenshot](https://i.postimg.cc/05cHGns1/Screenshot-2024-02-09-183203.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![App Screenshot](https://i.postimg.cc/Xvs2bKg0/Screenshot-2024-02-09-183226.png) 
 
-### `npm run build`
+![App Screenshot](https://i.postimg.cc/3NXmKYHD/Screenshot-2024-02-09-183344.png) 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Client:** React, Redux, TailwindCSS, Firebase
 
-### `npm run eject`
+**Server:** Node, Express
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Database:** MongoDB 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Environment Variables
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To run this project, you will need to add the following environment variables to your .env file
 
-## Learn More
+`REACT_APP_HOST`=  'https://netflix-api-mp9k.onrender.com'
+`REACT_APP_TMDB_BASE_URL`=' https://api.themoviedb.org/3'
+`REACT_APP_API_KEY`= your_api_key
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Run Locally
 
-### Analyzing the Bundle Size
+Clone the project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+  git clone https://github.com/varun-singh-0518/Movies-Streaming-App.git
+```
 
-### Making a Progressive Web App
+Go to the project directory
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+  cd my-project
+```
 
-### Advanced Configuration
+Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+  npm install
+```
 
-### Deployment
+Start the server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+  npm start
+```
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Hi, I'm Varun! 👋
+
+
+## 🚀 About Me
+I'm a full stack developer...
+
